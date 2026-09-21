@@ -1,0 +1,75 @@
+<div class="reto-container">
+
+  <button class="boton-reto" onclick="generarReto()">
+     GENERAR MI RETO
+  </button>
+
+  <div id="reto" class="reto">
+    Presiona el botón para descubrir tu reto.
+  </div>
+
+</div>
+
+<style>
+.reto-container {
+  background: #dff3df;
+  padding: 40px 25px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+.boton-reto {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 20px 45px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.boton-reto:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+.reto {
+  margin: 30px auto 0;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #2e5d34;
+  max-width: 550px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.10);
+}
+
+</style>
+
+<script>
+const retos = [
+  "💧 Hoy intenta usar solo el agua que realmente necesitas.",
+  "♻️ Procura que tus residuos terminen en el lugar adecuado.",
+  "🥤 Reutiliza algún objeto antes de desecharlo.",
+  "💡 Comprueba que no queden luces encendidas innecesariamente.",
+  "📚 Aprovecha una hoja antes de utilizar una nueva.",
+  "🌳 Dedica unos minutos a cuidar o limpiar un espacio compartido.",
+  "👀 Identifica tres acciones que podrían ser más amigables con el ambiente.",
+  "🤝 Invita a alguien a realizar contigo una acción ecológica."
+];
+
+function generarReto() {
+  const retoAleatorio = retos[Math.floor(Math.random() * retos.length)];
+  document.getElementById("reto").textContent = retoAleatorio;
+}
+</script>
